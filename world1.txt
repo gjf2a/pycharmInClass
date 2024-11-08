@@ -1,0 +1,7 @@
+front_yard: entrance, sidewalk
+entrance: front_yard, living_room
+living_room: entrance, kitchen, dining_room
+kitchen: living_room, dining_room, backyard
+backyard: kitchen
+dining_room: kitchen, living_room
+sidewalk: front_yard

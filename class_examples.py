@@ -25,11 +25,17 @@ class Counter:
 
 
 class Car:
-    def __init__(self, fuel_capacity, mpg):
+    def __init__(self, fuel_capacity, mpg, fuel_in_tank=None, odometer=0):
         self.fuel_capacity = fuel_capacity
-        self.fuel_in_tank = fuel_capacity
+        if fuel_in_tank is None:
+            self.fuel_in_tank = fuel_capacity
+        else:
+            self.fuel_in_tank = fuel_in_tank
         self.mpg = mpg
-        self.odometer = 0
+        self.odometer = odometer
+
+    def __repr__(self):
+        return f"Car(fuel_capacity={self.fuel_capacity}, mpg={self.mpg}, fuel_in_tank={self.fuel_in_tank}, odometer={self.odometer})"
 
     def drive(self, distance: float):
         fuel_consumed = distance / self.mpg
