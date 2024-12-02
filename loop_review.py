@@ -23,11 +23,8 @@ def loop_sum_recursive_start(nums: List[int]) -> int:
 
 def loop_sum_recursive_1(nums: List[int], i: int, total: int) -> int:
     if i == len(nums):
-        # Base case
         return total
     else:
-        # Recursive case
-        # How does this move us closer to the base case?
         return loop_sum_recursive_1(nums, i + 1, total + nums[i])
 
 
